@@ -65,7 +65,7 @@ def create_missing_skills_bar(skills: list[dict]) -> go.Figure:
             ),
             text=[f"{d}%" for d in demand[::-1]],
             textposition="auto",
-            textfont=dict(color="white", size=11),
+            textfont=dict(color="#1E293B", size=11),
             hovertemplate="<b>%{y}</b><br>Market demand: %{x}%<extra></extra>",
         )
     )
