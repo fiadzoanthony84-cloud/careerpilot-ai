@@ -8,7 +8,7 @@ CSS_PATH = ASSETS_DIR / "styles.css"
 LOGO_PATH = ASSETS_DIR / "logo.png"
 
 # ── API ─────────────────────────────────────────────────────
-DEFAULT_API_URL = "http://localhost:8000"
+DEFAULT_API_URL = "https://careerpilot-backend-0moc.onrender.com"
 API_TIMEOUT = 30
 
 # ── Theme Colors ────────────────────────────────────────────
