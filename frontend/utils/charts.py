@@ -43,7 +43,7 @@ def create_industries_bar(industries: list[dict]) -> go.Figure:
         )
     )
     fig.update_layout(**_base_layout("Top Industries"))
-    fig.update_xaxes(showgrid=True, gridcolor="rgba(148,163,184,0.15)", zeroline=False)
+    fig.update_xaxes(showgrid=True, gridcolor="rgba(148,163,184,0.15)", zeroline=False, tickfont=dict(color="#293442", size=11),)
     fig.update_yaxes(showgrid=False)
     return fig
 
@@ -70,7 +70,7 @@ def create_missing_skills_bar(skills: list[dict]) -> go.Figure:
         )
     )
     fig.update_layout(**_base_layout("Top Missing Skills"))
-    fig.update_xaxes(showgrid=True, gridcolor="rgba(148,163,184,0.15)", range=[0, 100], zeroline=False)
+    fig.update_xaxes(showgrid=True, gridcolor="rgba(148,163,184,0.15)", range=[0, 100], zeroline=False, tickfont=dict(color="#121E30", size=11))
     fig.update_yaxes(showgrid=False)
     return fig
 
