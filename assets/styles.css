@@ -1,0 +1,140 @@
+/* ============================================================
+   CareerPilot AI — Premium SaaS Dashboard Theme
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #2563EB;
+  --secondary: #1E293B;
+  --accent: #06B6D4;
+  --bg: #F8FAFC;
+  --bg-elevated: #FFFFFF;
+  --bg-glass: rgba(255, 255, 255, 0.72);
+  --text: #0F172A;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
+  --border: rgba(148, 163, 184, 0.25);
+  --border-strong: rgba(148, 163, 184, 0.45);
+  --success: #22C55E;
+  --success-dark: #15803D;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.12);
+  --shadow-neu-inset: inset 4px 4px 10px rgba(148, 163, 184, 0.15);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient-hero: linear-gradient(135deg, #2563EB 0%, #06B6D4 50%, #2563EB 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.85) 100%);
+}
+
+.stApp { background: var(--bg) !important; font-family: 'Inter', sans-serif !important; }
+.block-container { padding: 1.5rem 2rem 3rem 2rem !important; max-width: 1400px !important; }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes gradient-shift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+.animate-fade-in { animation: fadeInUp 0.6s ease-out forwards; }
+
+.cp-hero {
+  position: relative; padding: 3rem 2.5rem; border-radius: var(--radius-xl);
+  background: var(--gradient-hero); background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite; color: white; overflow: hidden;
+  margin-bottom: 2rem; box-shadow: var(--shadow-lg);
+}
+.cp-hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.15); border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+.cp-hero-badge .dot { width: 8px; height: 8px; background: #22C55E; border-radius: 50%; }
+.cp-hero h1 { font-size: 2.75rem; font-weight: 800; margin: 0 0 0.5rem 0; }
+.cp-hero p { font-size: 1.15rem; opacity: 0.92; margin: 0; max-width: 600px; }
+.cp-hero-stats { display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+.cp-hero-stat .value { font-size: 1.5rem; font-weight: 700; }
+.cp-hero-stat .label { font-size: 0.75rem; opacity: 0.8; text-transform: uppercase; }
+
+.cp-metric-card { background: var(--gradient-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem; position: relative; overflow: hidden; transition: var(--transition); }
+.cp-metric-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.cp-metric-icon { width: 44px; height: 44px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 1rem; }
+.cp-metric-icon.blue { background: rgba(37,99,235,0.12); }
+.cp-metric-icon.cyan { background: rgba(6,182,212,0.12); }
+.cp-metric-icon.green { background: rgba(34,197,94,0.12); }
+.cp-metric-icon.amber { background: rgba(245,158,11,0.12); }
+.cp-metric-value { font-size: 2rem; font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 0.35rem; }
+.cp-metric-label { font-size: 0.8rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase; }
+.cp-metric-trend.up { color: var(--success); font-size: 0.75rem; font-weight: 600; margin-top: 0.5rem; }
+
+.cp-profile-card { display: flex; align-items: center; gap: 1.5rem; background: var(--gradient-card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 2rem; margin-bottom: 1.5rem; box-shadow: var(--shadow-md); }
+.cp-avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--gradient-hero); display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; color: white; flex-shrink: 0; }
+.cp-profile-info h2 { margin: 0 0 0.25rem 0; font-size: 1.5rem; font-weight: 700; color: var(--text); }
+.cp-profile-info .qualification { color: var(--primary); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.75rem; }
+.cp-profile-stats { display: flex; gap: 1.5rem; }
+.cp-profile-stat .num { font-size: 1.25rem; font-weight: 700; color: var(--text); }
+.cp-profile-stat .lbl { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; }
+
+.cp-skills-container { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.5rem 0; }
+.cp-skill-badge { display: inline-flex; align-items: center; gap: 0.35rem; background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.2); color: var(--primary); padding: 0.4rem 0.85rem; border-radius: 999px; font-size: 0.82rem; font-weight: 500; }
+.cp-skill-badge.missing { background: rgba(239,68,68,0.08); border-color: rgba(239,68,68,0.25); color: var(--danger); }
+
+.cp-job-card { background: var(--gradient-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.75rem; margin-bottom: 1.25rem; position: relative; overflow: hidden; transition: var(--transition); }
+.cp-job-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.cp-job-rank { position: absolute; top: 1rem; right: 1rem; width: 36px; height: 36px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
+.cp-job-header { padding-right: 3rem; margin-bottom: 1rem; }
+.cp-job-title { font-size: 1.2rem; font-weight: 700; color: var(--text); margin: 0 0 0.25rem 0; }
+.cp-job-company { font-size: 0.95rem; color: var(--text-muted); font-weight: 500; }
+.cp-job-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; }
+.cp-job-tag { display: inline-flex; align-items: center; gap: 0.3rem; background: var(--bg-glass); border: 1px solid var(--border); padding: 0.3rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+.cp-match-score { display: flex; align-items: center; gap: 1rem; margin: 1rem 0; }
+.cp-match-label { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); min-width: 90px; }
+.cp-progress-bar { flex: 1; height: 10px; background: var(--bg); border-radius: 999px; overflow: hidden; box-shadow: var(--shadow-neu-inset); }
+.cp-progress-fill { height: 100%; border-radius: 999px; transition: width 1s ease-out; }
+.cp-progress-fill.excellent { background: linear-gradient(90deg, #15803D, #22C55E); }
+.cp-progress-fill.good { background: linear-gradient(90deg, #22C55E, #4ADE80); }
+.cp-progress-fill.fair { background: linear-gradient(90deg, #F59E0B, #FBBF24); }
+.cp-progress-fill.poor { background: linear-gradient(90deg, #EF4444, #F87171); }
+.cp-match-percent { font-size: 1.1rem; font-weight: 800; min-width: 50px; text-align: right; }
+.cp-match-percent.excellent { color: #15803D; }
+.cp-match-percent.good { color: #22C55E; }
+.cp-match-percent.fair { color: #F59E0B; }
+.cp-match-percent.poor { color: #EF4444; }
+.cp-job-description { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.cp-job-skills-section { margin-top: 1rem; }
+.cp-job-skills-section h4 { font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.5rem 0; font-weight: 600; }
+
+.cp-timeline-item { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--border); }
+.cp-timeline-item:last-child { border-bottom: none; }
+.cp-timeline-dot { width: 12px; height: 12px; background: var(--primary); border-radius: 50%; margin-top: 0.35rem; flex-shrink: 0; }
+.cp-timeline-content h4 { margin: 0 0 0.2rem 0; font-size: 0.95rem; font-weight: 600; color: var(--text); }
+.cp-timeline-content .org { color: var(--primary); font-size: 0.85rem; font-weight: 500; }
+.cp-timeline-content .period { color: var(--text-light); font-size: 0.78rem; margin-top: 0.15rem; }
+
+.cp-document-viewer { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); overflow: hidden; }
+.cp-document-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.25rem; background: var(--bg-glass); border-bottom: 1px solid var(--border); }
+.cp-document-toolbar .dots { display: flex; gap: 0.4rem; }
+.cp-document-toolbar .dot-red { width: 12px; height: 12px; background: #EF4444; border-radius: 50%; }
+.cp-document-toolbar .dot-yellow { width: 12px; height: 12px; background: #F59E0B; border-radius: 50%; }
+.cp-document-toolbar .dot-green { width: 12px; height: 12px; background: #22C55E; border-radius: 50%; }
+.cp-document-title { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); }
+.cp-document-body { padding: 2.5rem 3rem; font-family: 'Georgia', serif; font-size: 0.95rem; line-height: 1.8; color: var(--text); min-height: 300px; white-space: pre-wrap; }
+.cp-document-meta { display: flex; gap: 1.5rem; padding: 0.75rem 1.25rem; background: var(--bg-glass); border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted); }
+
+.cp-scam-result { text-align: center; padding: 2.5rem; border-radius: var(--radius-xl); margin: 1.5rem 0; }
+.cp-scam-result.safe { background: linear-gradient(135deg, rgba(34,197,94,0.12), rgba(34,197,94,0.04)); border: 2px solid rgba(34,197,94,0.3); }
+.cp-scam-result.moderate { background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(245,158,11,0.04)); border: 2px solid rgba(245,158,11,0.3); }
+.cp-scam-result.high { background: linear-gradient(135deg, rgba(239,68,68,0.12), rgba(239,68,68,0.04)); border: 2px solid rgba(239,68,68,0.3); }
+.cp-scam-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+.cp-scam-label { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem; }
+.cp-scam-label.safe { color: var(--success-dark); }
+.cp-scam-label.moderate { color: var(--warning); }
+.cp-scam-label.high { color: var(--danger); }
+.cp-scam-detail { color: var(--text-muted); font-size: 0.95rem; max-width: 500px; margin: 0 auto; }
+
+.cp-section-header { margin-bottom: 1.5rem; }
+.cp-section-header h2 { font-size: 1.5rem; font-weight: 700; color: var(--text); margin: 0 0 0.35rem 0; }
+.cp-section-header p { color: var(--text-muted); font-size: 0.92rem; margin: 0; }
+
+.cp-empty-state { text-align: center; padding: 4rem 2rem; color: var(--text-muted); }
+.cp-empty-state .icon { font-size: 3rem; margin-bottom: 1rem; opacity: 0.5; }
+.cp-empty-state h3 { font-size: 1.15rem; font-weight: 600; color: var(--text); margin: 0 0 0.5rem 0; }
+.cp-empty-state p { font-size: 0.9rem; max-width: 400px; margin: 0 auto; }
