@@ -26,6 +26,19 @@ CareerPilot AI is an AI-powered career assistance platform that helps users anal
 
 \- Interactive analytics and charts
 
+# How CareerPilot AI Works
+
+CareerPilot AI takes information from a user's CV and uses it to provide different career support services.
+
+The main process is:
+
+1. The user uploads their CV.
+2. The system analyzes the CV and extracts relevant information such as skills, education, and experience.
+3. The extracted information is used to find suitable job and internship opportunities.
+4. The system identifies skills that may be missing for recommended opportunities.
+5. Users can also receive career insights, generate a personalized cover letter, and check job postings for possible scams.
+
+This allows the user's CV information to be used across different features instead of requiring the user to enter the same information multiple times.
 
 
 \# System Architecture
