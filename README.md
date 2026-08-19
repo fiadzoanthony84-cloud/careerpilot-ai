@@ -140,7 +140,7 @@ Streamlit will provide a local URL that can be opened in a web browser.
 
 ##For the easiest way to evaluate the completed system, use the hosted application:
 Click the Streamlit link  → https://careerpilot-ai-h84hoxjddn8tlcnuh44d6j.streamlit.app/
-
+Click the render link → https://careerpilot-backend-0moc.onrender.com/health for the server in render 
 Deployment
 The production version of CareerPilot AI is deployed using:
 Streamlit Community Cloud – Frontend
