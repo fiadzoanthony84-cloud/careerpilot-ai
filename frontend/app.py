@@ -252,7 +252,7 @@ elif page == "cv_analysis":
         )
 
 
-# ── Job Recommendations ──────────────────────────────────────
+# ── Job Recommendations ───────────────────────────────────
 
 elif page == "job_recommendations":
 
@@ -529,3 +529,4 @@ elif page == "report":
                 build_job_card(job),
                 unsafe_allow_html=True,
             )
+            
