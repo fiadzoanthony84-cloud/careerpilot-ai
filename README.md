@@ -162,9 +162,5 @@ The required Python dependencies are specified in:
 
 Authors
 Group 12
-Kofi -Asante
-Anthony
-Manyok
-Raicha
 
 
